@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import RequestTrainingSection from "./RequestTrainingSection";
+import RequestForm from "./RequestForm";
 
 function Reserve() {
     const router = useRouter();
@@ -17,7 +18,9 @@ function Reserve() {
         <>
             <button onClick={handleClick}>Back</button>
             <h2>Make reservation</h2>
-            <div className="form-section">
+            <RequestForm />
+            <div 
+            className="form-section">
                 <h3>Doing the scans:</h3>
                 <label>
                 <input
