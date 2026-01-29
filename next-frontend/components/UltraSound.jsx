@@ -1,7 +1,7 @@
 function UltraSound() {
     return(
         <>
-            <p>Button Clicked</p>
+            <i>Ultrasound Component Here</i>
         </>
     )
 }
