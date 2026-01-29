@@ -1,6 +1,6 @@
 function RequestTrainingSection() {
     return (
-        <div class="form-section">
+        <div className="form-section">
             <input
                 type="checkbox"
                 id="requestTraining"
