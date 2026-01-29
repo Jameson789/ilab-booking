@@ -16,12 +16,9 @@ function Reserve() {
     return (
         <>
             <button onClick={handleClick}>Back</button>
-            
+            <h2>Make reservation</h2>
             <div className="form-section">
-                <b>Doing the scans:</b>
-                <br/>
-                <br/>
-
+                <h3>Doing the scans:</h3>
                 <label>
                 <input
                     type="radio"
