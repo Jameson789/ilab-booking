@@ -1,6 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation";
+import RequestTrainingSection from "./RequestTrainingSection";
 
 function Reserve() {
     const router = useRouter();
@@ -9,8 +10,9 @@ function Reserve() {
     };
     return (
         <>
-        <button onClick={handleClick}>Home Page</button>
-        <p>Reserve</p>
+            <button onClick={handleClick}>Home Page</button>
+            <RequestTrainingSection></RequestTrainingSection>
+            <p>Reserve</p>
         </>
     );
 }
