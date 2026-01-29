@@ -11,7 +11,7 @@ function MakeReservation() {
 
   return (
     <>
-      <p>Make a reservation</p>
+      <h2>Make reservation</h2>
 
       <button onClick={handleClick}>
         Ultrasound

@@ -1,7 +1,7 @@
 function Reservations() {
     return (
         <>
-            <p>Reservations</p>
+            <h2>Review reservations</h2>
         </>
     )
 }
