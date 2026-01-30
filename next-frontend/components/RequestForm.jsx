@@ -17,6 +17,7 @@ function RequestForm() {
                 <label>Study Focus</label>
                 <br/>
                 <textarea></textarea>
+                <br/>
 
                 <label>Billing Code</label>
                 <br/>
