@@ -1,26 +1,15 @@
 "use client"
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import RequestTrainingSection from "./RequestTrainingSection";
-import RequestForm from "./RequestForm";
 
-function Reserve() {
-    const router = useRouter();
-
+function LabChoice() {
     // Set who is doing the scans
     const [doingScans, setDoingScans] = useState("pciCore"); // "myLab" or "pciCore"
 
-    const handleClick = () => {
-        router.push("/");
-    };
     return (
         <>
-            <button onClick={handleClick}>Back</button>
-            <h2>Make reservation</h2>
-            <RequestForm />
-            <div 
-            className="form-section">
+            <div className="form-section">
                 <h3>Doing the scans:</h3>
                 <label>
                 <input
@@ -49,10 +38,8 @@ function Reserve() {
             {/* If my lab is doing the training, render Request Training section */}
             {doingScans === "myLab" && <RequestTrainingSection />}
 
-
-            <button>Reserve</button>
         </>
     );
 }
 
-export default Reserve;
+export default LabChoice;

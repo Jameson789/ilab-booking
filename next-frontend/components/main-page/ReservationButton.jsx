@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-function MakeReservation() {
+function ReservationButton() {
   const router = useRouter();
 
   const handleClick = () => {
@@ -11,13 +11,11 @@ function MakeReservation() {
 
   return (
     <>
-      <h2>Make reservation</h2>
-
       <button onClick={handleClick}>
-        Ultrasound
+        RESERVE
       </button>
     </>
   );
 }
 
-export default MakeReservation;
+export default ReservationButton;
