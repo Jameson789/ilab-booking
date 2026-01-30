@@ -1,5 +1,9 @@
-import Reserve from "@/components/form/ReservePage";
+'use client'
+import ReservePage from "@/components/form/ReservePage";
+import { useSearchParams } from "next/navigation";
 
 export default function Page() {
-  return <Reserve />;
+  const searchParams = useSearchParams();
+  const machineName = searchParams.get("machine");
+  return <ReservePage machineName={machineName}/>;
 }

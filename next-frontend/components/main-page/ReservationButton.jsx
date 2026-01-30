@@ -2,17 +2,17 @@
 
 import { useRouter } from "next/navigation";
 
-function ReservationButton() {
+function ReservationButton({ machineName }) {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/reserve");
+    router.push(`/reserve?machine=${encodeURIComponent(machineName)}`);
   };
 
   return (
     <>
       <button onClick={handleClick}>
-        RESERVE
+        {machineName}
       </button>
     </>
   );

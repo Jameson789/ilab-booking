@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import '../../app/globals.css'
-function ReserveForm() {
+function ReserveForm({ machineName }) {
     const [formData, setFormData] = useState({
         piName: '',
         studyName: '',
@@ -19,7 +19,7 @@ function ReserveForm() {
 
     return (
         <>
-            <h2>*Study* Form </h2>
+            <h2>{machineName} Form </h2>
             <div className="form-section">
                 <form>
                     <label>PI Name</label>

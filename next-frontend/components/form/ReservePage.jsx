@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import ReserveForm from "./ReserveForm";
 import LabChoice from "./LabChoice";
 
-function Reserve() {
+function Reserve({ machineName }) {
     const router = useRouter();
 
 
@@ -14,7 +14,7 @@ function Reserve() {
     return (
         <>
             <button onClick={handleClick}>Back</button>
-            <ReserveForm />
+            <ReserveForm machineName={machineName}/>
             <LabChoice />
 
 
