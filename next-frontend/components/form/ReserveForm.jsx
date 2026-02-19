@@ -56,6 +56,10 @@ function ReserveForm({ machineName }) {
                         value={formData.billingCode}
                         onChange={handleChange}
                     />
+                    <br/>
+                    <label>Upload patient data</label>
+                    <br/>
+                    <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="file" name="file" multiple/>
                 </form>
             </div>
         </>
