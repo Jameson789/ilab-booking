@@ -18,9 +18,11 @@ function Reservations() {
     return (
         <>
             <h2>Review Reservations</h2>
-            {reservations.map((reservation) => (
-                <p key={reservation.id}>{reservation.name} - {reservation.state}</p>
-            ))}
+            <ul>
+                {reservations.map((reservation) => (
+                    <li key={reservation.id}>{reservation.name} - <em>{reservation.state}</em></li>
+                ))}
+            </ul>
         </>
     )
 }
