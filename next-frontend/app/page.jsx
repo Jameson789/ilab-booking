@@ -11,8 +11,6 @@ export default function HomePage() {
       <h1>Fred Hutch Booking</h1>
       <MakeReservationSection />
       <ReservationsSection />
-      
-      <UltraSound />
     </main>
   );
 }
