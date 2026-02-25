@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Reservation from "./Reservation";
 
 function Reservations() {
     const [reservations, setReservations] = useState([]);
@@ -18,11 +19,9 @@ function Reservations() {
     return (
         <>
             <h2>Review Reservations</h2>
-            <ul>
-                {reservations.map((reservation) => (
-                    reservation.state !== "cancelled" && <li key={reservation.id}>{reservation.name} - <em>{reservation.state}</em></li> 
-                ))}
-            </ul>
+            {reservations.map((reservation) => (
+                        <Reservation key={reservation.id} id={reservation.id} name={reservation.name} state={reservation.state} submitted_at={reservation.submitted_at}/>
+            ))}
         </>
     )
 }
