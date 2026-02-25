@@ -1,4 +1,4 @@
-"user client";
+"use client";
 
 import { useState, useEffect } from "react";
 
@@ -20,7 +20,7 @@ function Reservations() {
             <h2>Review Reservations</h2>
             <ul>
                 {reservations.map((reservation) => (
-                    <li key={reservation.id}>{reservation.name} - <em>{reservation.state}</em></li>
+                    reservation.state !== "cancelled" && <li key={reservation.id}>{reservation.name} - <em>{reservation.state}</em></li> 
                 ))}
             </ul>
         </>
