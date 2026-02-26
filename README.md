@@ -9,27 +9,7 @@
 
 ## Backend
 
-
-
-## Running Tests 
-
-This project includes a shell script that runs the server tests from the root directory.
-
-#### 1) Make the script executable (first time only)
-
-```bash
-chmod +x scripts/run-tests.sh
-```
-
-#### 2) Run the tests
-
-From the project root:
-
-```bash
-./scripts/run-tests.sh
-```
-
----
+## Running the App and Tests
 
 #### Requirements
 
@@ -37,6 +17,7 @@ Make sure you have the following installed:
 
 - Node.js (includes `npm`)
 - Server dependencies installed in the `server` directory
+- Frontend dpendencies installed in the `next-frontend` directory
 
 If dependencies are not installed yet:
 
@@ -45,6 +26,30 @@ cd server
 npm install
 cd ..
 ```
+and: 
+```bash
+cd next-frontend
+npm install
+cd ..
+```
+
+#### Running the App: 
+
+1) Be in root of project 
+
+2) Run ```npm run dev``` in terminal 
+
+3) Any Errors will show up in console output
+
+#### Running Tests: 
+
+This project includes a script that runs the server tests from the root directory.
+
+1) Be in root of project 
+
+2) Run ```npm run test``` in terminal 
+
+3) Any Errors will show up in console output
 
 ---
 
