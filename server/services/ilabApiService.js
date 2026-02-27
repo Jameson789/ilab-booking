@@ -14,7 +14,7 @@ export const fetchServiceRequests = async () => {
     return res.data;
 }
 
-export const postServiceRequest = async (payload) => {
+export const postServiceRequests = async (payload) => {
     const res = await ilabClient.post('/v1/cores/4665/service_requests', payload);
     return res.data;
 }
