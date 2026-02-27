@@ -1,11 +1,22 @@
 "use client"
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ReserveForm from "./ReserveForm";
 import LabChoice from "./LabChoice";
 
 function Reserve({ machineName }) {
     const router = useRouter();
+
+    const [formData, setFormData] = useState({
+        ownerEmail: '',
+        piEmail: '',
+        studyName: '',
+        state: 'proposed', // default
+    });
+
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleClick = () => {
         router.push("/");
