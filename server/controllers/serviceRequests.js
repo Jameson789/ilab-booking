@@ -11,7 +11,7 @@ export const getAllValidServiceRequests = async (req, res) => {
     } 
 };
 
-export const createServiceRequest = async (req, res) => {
+export const createServiceRequests = async (req, res) => {
     const { owner_email, pi_email, name, state } = req.body.service_request;
     
     if (!owner_email) {
@@ -28,11 +28,10 @@ export const createServiceRequest = async (req, res) => {
     }
 
     try {
-        const payload = {}
-        const data = {}
+        const payload = { service_request: { owner_email, pi_email, name, state } };
+        const data = await postServiceRequests(payload);
         res.status(201).json(data);
     } catch (err) {
-        console.error('ERROR: ', err.message);
-        res.status(500).json({ error: '' })
+        res.status(500).json({ error: 'Failed to create service request' });
     }
 }

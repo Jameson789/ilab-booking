@@ -1,15 +1,7 @@
 'use client'
 import { useState } from 'react'
 import '../../app/globals.css'
-function ReserveForm({ machineName, formData, errors }) {
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
+function ReserveForm({ machineName, formData, errors, onChange }) {
 
     return (
         <>
@@ -23,7 +15,7 @@ function ReserveForm({ machineName, formData, errors }) {
                     name="ownerEmail"
                     type="email"
                     value={formData.ownerEmail}
-                    onChange={handleChange}
+                    onChange={onChange}
                     />
                     <br />
 
@@ -34,7 +26,7 @@ function ReserveForm({ machineName, formData, errors }) {
                         name="piEmail"
                         type="email"
                         value={formData.piEmail}
-                        onChange={handleChange}
+                        onChange={onChange}
                     />
                     <br />
 
@@ -44,22 +36,18 @@ function ReserveForm({ machineName, formData, errors }) {
                         id="studyName"
                         name="studyName"
                         value={formData.studyName}
-                        onChange={handleChange}
+                        onChange={onChange}
                     />
                     <br />
 
                     <label>Study Focus</label>
                     <br/>
-                    <textarea 
-                        name="studyFocus"
-                    />
+                    <textarea name="studyFocus" />
                     <br/>
 
                     <label>Billing Code</label>
                     <br/>
-                    <input 
-                        name="billingCode"
-                    />
+                    <input name="billingCode" />
                     <br/>
 
                     <label>Upload patient data</label>

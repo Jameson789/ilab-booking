@@ -70,6 +70,7 @@ function Reserve({ machineName }) {
                     machineName={machineName}
                     formData={formData}
                     errors={errors}
+                    onChange={handleChange}
                 />
                 <LabChoice />
                 <button type="submit" disabled={isSubmitting}>
