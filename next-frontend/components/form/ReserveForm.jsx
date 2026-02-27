@@ -1,13 +1,7 @@
 'use client'
 import { useState } from 'react'
 import '../../app/globals.css'
-function ReserveForm({ machineName }) {
-    const [formData, setFormData] = useState({
-        piName: '',
-        studyName: '',
-        studyFocus: '',
-        billingCode: ''
-    });
+function ReserveForm({ machineName, formData, errors }) {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,30 +16,42 @@ function ReserveForm({ machineName }) {
             <h2>{machineName} Form </h2>
             <div className="form-section">
                 <form>
-                    <label>PI Name</label>
-                    <br/>
-                    <input 
-                        name="piName"
-                        value={formData.piName}
+                    <label>Your Email</label>
+                    <br />
+                    <input
+                    id="ownerEmail"
+                    name="ownerEmail"
+                    type="email"
+                    value={formData.ownerEmail}
+                    onChange={handleChange}
+                    />
+                    <br />
+
+                    <label htmlFor="piEmail">PI Email</label>
+                    <br />
+                    <input
+                        id="piEmail"
+                        name="piEmail"
+                        type="email"
+                        value={formData.piEmail}
                         onChange={handleChange}
                     />
-                    <br/>
+                    <br />
 
-                    <label>Study Name</label>
-                    <br/>
-                    <input 
+                    <label htmlFor="studyName">Study Name</label>
+                    <br />
+                    <input
+                        id="studyName"
                         name="studyName"
                         value={formData.studyName}
                         onChange={handleChange}
                     />
-                    <br/>
+                    <br />
 
                     <label>Study Focus</label>
                     <br/>
                     <textarea 
                         name="studyFocus"
-                        value={formData.studyFocus}
-                        onChange={handleChange}
                     />
                     <br/>
 
@@ -53,10 +59,9 @@ function ReserveForm({ machineName }) {
                     <br/>
                     <input 
                         name="billingCode"
-                        value={formData.billingCode}
-                        onChange={handleChange}
                     />
                     <br/>
+
                     <label>Upload patient data</label>
                     <br/>
                     <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="file" name="file" multiple/>
