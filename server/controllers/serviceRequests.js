@@ -32,6 +32,9 @@ export const createServiceRequests = async (req, res) => {
         const data = await postServiceRequests(payload);
         res.status(201).json(data);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to create service request' });
+        const status = err.response?.status ?? 500;
+        const message = err.response?.data?.message ?? 'Failed to create service request';
+        console.error('ERROR:', status, message);
+        res.status(status).json({ error: message });
     }
 }

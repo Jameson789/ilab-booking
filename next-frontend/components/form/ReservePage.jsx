@@ -47,7 +47,13 @@ function Reserve({ machineName }) {
 
             if (!res.ok) {
                 const errData = await res.json();
-                setApiError(errData.error || 'Something went wrong.');
+                if (errData.error === 'PI not found') {
+                    setErrors(prev => ({ ...prev, piEmail: 'PI not found in the system.' }));
+                } else if (errData.error === 'Owner not found') {
+                    setErrors(prev => ({ ...prev, ownerEmail: 'Owner not found in the system.' }));
+                } else {
+                    setApiError(errData.error || 'Something went wrong.');
+                }
                 return;
             }
 

@@ -17,6 +17,7 @@ function ReserveForm({ machineName, formData, errors, onChange }) {
                     value={formData.ownerEmail}
                     onChange={onChange}
                     />
+                    {errors?.ownerEmail && <span style={{ color: 'red' }}>{errors.ownerEmail}</span>}
                     <br />
 
                     <label htmlFor="piEmail">PI Email</label>
@@ -28,6 +29,7 @@ function ReserveForm({ machineName, formData, errors, onChange }) {
                         value={formData.piEmail}
                         onChange={onChange}
                     />
+                    {errors?.piEmail && <span style={{ color: 'red' }}>{errors.piEmail}</span>}
                     <br />
 
                     <label htmlFor="studyName">Study Name</label>
