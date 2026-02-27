@@ -42,9 +42,15 @@ function Reserve({ machineName }) {
         <>
             <button onClick={handleBack}>Back</button>
             <form onSubmit={handleSubmit}>
-                <ReserveForm machineName={machineName}/>
+                <ReserveForm 
+                    machineName={machineName}
+                    formData={formData}
+                    error={errors}
+                />
                 <LabChoice />
-                <button type="submit">Reserve</button>
+                <button type="submit" disabled={isSubmitting}>
+                    { isSubmitting ? "Submitting..." : "Reserve" }
+                </button>
             </form>
         </>
     );
