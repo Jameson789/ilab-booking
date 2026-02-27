@@ -10,3 +10,18 @@
 
     margin: 10px;
 }
+
+.reservations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.reservation-card {
+    border: 1px solid #ccc;
+    background-color: beige;
+    padding: 8px;
+    border-radius: 4px;
+    width: 180px;
+}

@@ -19,9 +19,17 @@ function Reservations() {
     return (
         <>
             <h2>Review Reservations</h2>
-            {reservations.map((reservation) => (
-                        <Reservation key={reservation.id} id={reservation.id} name={reservation.name} state={reservation.state} submitted_at={reservation.submitted_at}/>
-            ))}
+            <div className="reservations-grid">
+                {reservations.map((reservation) => (
+                    <Reservation
+                        key={reservation.id}
+                        id={reservation.id}
+                        name={reservation.name}
+                        state={reservation.state}
+                        submitted_at={reservation.submitted_at}
+                    />
+                ))}
+            </div>
         </>
     )
 }

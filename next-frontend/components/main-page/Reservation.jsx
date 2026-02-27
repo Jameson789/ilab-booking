@@ -8,7 +8,7 @@ function Reservation({ id, name, state, submitted_at }) {
 
   return (
     <>
-      <div style={{ border: "1px solid #ccc", backgroundColor: "beige", padding: "8px", margin: "8px", borderRadius: "4px", width: "15%" }}>
+      <div className="reservation-card">
         <strong>{name}</strong>
         <br />
         <em>{state}</em>
