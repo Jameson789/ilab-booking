@@ -18,19 +18,29 @@ function Reserve({ machineName }) {
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleClick = () => {
-        router.push("/");
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Machine reserved successfully");
-        router.push("/");
+        setIsSubmitting(true);
+
+        const data = {
+            service_request: {
+                owner_email: formData.ownerEmail,
+                pi_email: formData.piEmail,
+                name: formData.studyName,
+                state: formData.state,
+            }
+        };
+        
+        // TODO: Add API POST here
+
+        setIsSubmitting(false);
     };
+
+    const handleBack = () => router.push("/");
 
     return (
         <>
-            <button onClick={handleClick}>Back</button>
+            <button onClick={handleBack}>Back</button>
             <form onSubmit={handleSubmit}>
                 <ReserveForm machineName={machineName}/>
                 <LabChoice />
