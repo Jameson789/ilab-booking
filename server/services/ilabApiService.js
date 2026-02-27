@@ -14,4 +14,7 @@ export const fetchServiceRequests = async () => {
     return res.data;
 }
 
-// TODO: add postServiceRequests
+export const postServiceRequest = async (payload) => {
+    const res = await ilabClient.post('/v1/cores/4665/service_requests', payload);
+    return res.data;
+}
