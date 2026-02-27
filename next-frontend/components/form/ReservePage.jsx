@@ -16,13 +16,20 @@ function Reserve({ machineName }) {
     });
 
     const [errors, setErrors] = useState({});
+    const [apiError, setApiError] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setApiError(null);
 
-        const data = {
+        const payload = {
             service_request: {
                 owner_email: formData.ownerEmail,
                 pi_email: formData.piEmail,
@@ -31,9 +38,25 @@ function Reserve({ machineName }) {
             }
         };
         
-        // TODO: Add API POST here
+        try {
+            const res = await fetch('/api/service-requests', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
 
-        setIsSubmitting(false);
+            if (!res.ok) {
+                const errData = await res.json();
+                setApiError(errData.error || 'Something went wrong.');
+                return;
+            }
+
+            router.push('/');
+        } catch (err) {
+            setApiError('Network error. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleBack = () => router.push("/");
@@ -41,11 +64,12 @@ function Reserve({ machineName }) {
     return (
         <>
             <button onClick={handleBack}>Back</button>
+            {apiError && <div className="error-banner">{apiError}</div>}
             <form onSubmit={handleSubmit}>
                 <ReserveForm 
                     machineName={machineName}
                     formData={formData}
-                    error={errors}
+                    errors={errors}
                 />
                 <LabChoice />
                 <button type="submit" disabled={isSubmitting}>
