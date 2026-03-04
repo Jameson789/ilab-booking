@@ -34,9 +34,9 @@ function ReservationButton({ machineName }) {
             <Typography gutterBottom variant="h5" component="div">
               {machineName}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            {/* <Typography variant="body2" sx={{ color: 'text.secondary' }}>
               Insert description of {machineName} here...
-            </Typography>
+            </Typography> // TODO: See if Elena wants descriptions here*/ } 
           </CardContent>
         </CardActionArea>
       </Card>

@@ -9,7 +9,7 @@
 "use client";
 
 import AvailableServices from "@/components/main-page/AvailableServices";
-import ReservationsSection from "@/components/main-page/MyRequests";
+import MyRequests from "@/components/main-page/MyRequests";
 import ScheduleButton from "@/components/buttons/ScheduleButton";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -37,7 +37,7 @@ export default function HomePage() {
       </Box>
       <hr />
       <Box>
-        <ReservationsSection />
+        <MyRequests />
       </Box>
       
     </Box>

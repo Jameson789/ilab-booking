@@ -21,13 +21,13 @@ function AvailableServices() {
         Available Services
       </Typography>
       <Grid sx={{marginBottom: "17px"}}container spacing = {2}>
-        <Grid size={4}>
+        <Grid size={3}>
           <ReservationButton machineName="MRI" />
         </Grid>
-        <Grid size={4}>
+        <Grid size={3}>
           <ReservationButton machineName="Ultrasound" />
         </Grid>
-        <Grid size={4}>
+        <Grid size={3}>
           <ReservationButton machineName="Other"/>
         </Grid>
       </Grid>
