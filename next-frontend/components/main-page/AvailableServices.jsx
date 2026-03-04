@@ -5,7 +5,6 @@
 "use client";
 
 import Typography from '@mui/material/Typography';
-import { Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 import ReservationButton from "./EquipmentCard";
@@ -21,7 +20,7 @@ function AvailableServices() {
         gutterBottom>
         Available Services
       </Typography>
-      <Grid container spacing = {2}>
+      <Grid sx={{marginBottom: "17px"}}container spacing = {2}>
         <Grid size={4}>
           <ReservationButton machineName="MRI" />
         </Grid>

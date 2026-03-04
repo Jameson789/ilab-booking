@@ -1,9 +1,10 @@
 "use client";
 
+import Typography from '@mui/material/Typography';
 import { useState, useEffect } from "react";
 import Reservation from "./Reservation";
 
-function Reservations() {
+function MyRequests() {
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState(null);
     
@@ -18,7 +19,13 @@ function Reservations() {
 
     return (
         <>
-            <h2>Review Reservations</h2>
+            <Typography 
+                variant="h4" 
+                component="h2"
+                color="secondary" 
+                gutterBottom>
+                Available Services
+            </Typography>
             <div className="reservations-grid">
                 {reservations.map((reservation) => (
                     <Reservation
@@ -34,4 +41,4 @@ function Reservations() {
     )
 }
 
-export default Reservations;
+export default MyRequests;

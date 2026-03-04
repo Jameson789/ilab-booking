@@ -9,7 +9,7 @@
 "use client";
 
 import AvailableServices from "@/components/main-page/AvailableServices";
-import ReservationsSection from "@/components/main-page/ReservationsSection";
+import ReservationsSection from "@/components/main-page/MyRequests";
 import ScheduleButton from "@/components/buttons/ScheduleButton";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -22,7 +22,7 @@ export default function HomePage() {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        sx={{ width: '95%'}}>
+        sx={{ width: '100%'}}>
         <Typography 
           variant="h2" 
           component="h1"
@@ -35,6 +35,7 @@ export default function HomePage() {
       <Box>
         <AvailableServices />
       </Box>
+      <hr />
       <Box>
         <ReservationsSection />
       </Box>
