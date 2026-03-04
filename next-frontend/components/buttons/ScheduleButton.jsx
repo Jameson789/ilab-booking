@@ -5,7 +5,7 @@ function ScheduleButton() {
 
   return (
     <button onClick={handleClick}>
-      Schedule Consulatation
+      Schedule Consultation
     </button>
   );
 }
