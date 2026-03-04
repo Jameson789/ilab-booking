@@ -7,7 +7,7 @@ function Reservation({ id, name, state, submitted_at }) {
 
   return (
     <>
-      <Link href={`/reservations/${id}`} className="reservation-card" style={{ display: "block" }}>
+      <Link href={{pathname: `/reservations/${id}`, query: {name, state, submitted_at}}} className="reservation-card" style={{ display: "block" }}>
         <strong>{name}</strong>
         <br />
         <em>{state}</em>
