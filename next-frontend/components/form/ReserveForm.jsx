@@ -1,62 +1,62 @@
-'use client'
-import { useState } from 'react'
-import '../../app/globals.css'
-function ReserveForm({ machineName }) {
-    const [formData, setFormData] = useState({
-        piName: '',
-        studyName: '',
-        studyFocus: '',
-        billingCode: ''
-    });
+/*  
+    This component is a generic Form.
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
+    Parents -> ReservePage
+*/
+
+'use client'
+import '../../app/globals.css'
+function ReserveForm({ machineName, formData, errors, onChange }) {
 
     return (
         <>
             <h2>{machineName} Form </h2>
             <div className="form-section">
                 <form>
-                    <label>PI Name</label>
-                    <br/>
-                    <input 
-                        name="piName"
-                        value={formData.piName}
-                        onChange={handleChange}
+                    <label>Your Email</label>
+                    <br />
+                    <input
+                    id="ownerEmail"
+                    name="ownerEmail"
+                    type="email"
+                    value={formData.ownerEmail}
+                    onChange={onChange}
                     />
-                    <br/>
+                    {errors?.ownerEmail && <span style={{ color: 'red' }}>{errors.ownerEmail}</span>}
+                    <br />
 
-                    <label>Study Name</label>
-                    <br/>
-                    <input 
+                    <label htmlFor="piEmail">PI Email</label>
+                    <br />
+                    <input
+                        id="piEmail"
+                        name="piEmail"
+                        type="email"
+                        value={formData.piEmail}
+                        onChange={onChange}
+                    />
+                    {errors?.piEmail && <span style={{ color: 'red' }}>{errors.piEmail}</span>}
+                    <br />
+
+                    <label htmlFor="studyName">Study Name</label>
+                    <br />
+                    <input
+                        id="studyName"
                         name="studyName"
                         value={formData.studyName}
-                        onChange={handleChange}
+                        onChange={onChange}
                     />
-                    <br/>
+                    <br />
 
                     <label>Study Focus</label>
                     <br/>
-                    <textarea 
-                        name="studyFocus"
-                        value={formData.studyFocus}
-                        onChange={handleChange}
-                    />
+                    <textarea name="studyFocus" />
                     <br/>
 
                     <label>Billing Code</label>
                     <br/>
-                    <input 
-                        name="billingCode"
-                        value={formData.billingCode}
-                        onChange={handleChange}
-                    />
+                    <input name="billingCode" />
                     <br/>
+
                     <label>Upload patient data</label>
                     <br/>
                     <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="file" name="file" multiple/>

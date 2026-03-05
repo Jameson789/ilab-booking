@@ -1,3 +1,10 @@
+/*
+    This component renders the RequestTraining component when the "My Lab" option is chosen.
+
+    Parents -> ReservePage
+    Children -> RequestTrainingSection
+*/
+
 "use client"
 
 import { useState } from "react";
