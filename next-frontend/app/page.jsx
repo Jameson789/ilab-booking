@@ -8,40 +8,16 @@
 
 "use client";
 
-import AvailableServices from "@/components/main-page/AvailableServices";
-import MyRequests from "@/components/main-page/MyRequests";
-import ScheduleButton from "@/components/buttons/ScheduleButton";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import MakeReservationSection from "@/components/main-page/MakeReservationSection";
+import ReservationsSection from "@/components/main-page/ReservationsSection";
+import "./globals.css";
 
 export default function HomePage() {
   return (
-    <Box sx={{margin: '2%'}}>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        sx={{ width: '100%'}}>
-        <Typography 
-          variant="h2" 
-          component="h1"
-          color="primary" 
-          gutterBottom>
-          PCI Portal
-        </Typography>
-        <ScheduleButton></ScheduleButton>
-      </Box>
-
-      <Box>
-        <AvailableServices />
-      </Box>
-
-      <hr />
-      
-      <Box>
-        <MyRequests />
-      </Box>
-      
-    </Box>
+    <main>
+      <h1>Fred Hutch Booking</h1>
+      <MakeReservationSection />
+      <ReservationsSection />
+    </main>
   );
 }
