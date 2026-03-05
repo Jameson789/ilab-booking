@@ -1,3 +1,9 @@
+/*
+  This page renders the equipment scheduling forms.
+
+  Children -> ReservePage
+*/
+
 'use client'
 import ReservePage from "@/components/form/ReservePage";
 import { useSearchParams } from "next/navigation";

@@ -1,5 +1,7 @@
 /*
   This component renders the header and all active equipment card components.
+
+  Children -> EquipmentCard
 */
 
 "use client";
@@ -7,7 +9,7 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-import ReservationButton from "./EquipmentCard";
+import EquipmentCard from "./EquipmentCard";
 
 function AvailableServices() {
 
@@ -22,13 +24,13 @@ function AvailableServices() {
       </Typography>
       <Grid sx={{marginBottom: "17px"}}container spacing = {2}>
         <Grid size={3}>
-          <ReservationButton machineName="MRI" />
+          <EquipmentCard machineName="MRI" />
         </Grid>
         <Grid size={3}>
-          <ReservationButton machineName="Ultrasound" />
+          <EquipmentCard machineName="Ultrasound" />
         </Grid>
         <Grid size={3}>
-          <ReservationButton machineName="Other"/>
+          <EquipmentCard machineName="Other"/>
         </Grid>
       </Grid>
       

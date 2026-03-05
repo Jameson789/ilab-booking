@@ -1,3 +1,6 @@
+/*
+  This component is a button that opens a new tab and loads the Microsoft Booking page for consultations.
+*/
 import Button from '@mui/material/Button'
 
 

@@ -1,3 +1,8 @@
+/*
+    This component renders an option to request training on the machine being reserved.
+
+    Parents -> LabChoice
+*/
 function RequestTrainingSection() {
     return (
         <div className="form-section">

@@ -3,7 +3,7 @@
 
   It is the parent to all components in /components/main-page.
 
-  Children -> ScheduleButton, AvailableServices, ReservationSection
+  Children -> ScheduleButton, AvailableServices, MyRequests
 */
 
 "use client";
@@ -13,7 +13,6 @@ import MyRequests from "@/components/main-page/MyRequests";
 import ScheduleButton from "@/components/buttons/ScheduleButton";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-// import "./globals.css";
 
 export default function HomePage() {
   return (
@@ -32,10 +31,13 @@ export default function HomePage() {
         </Typography>
         <ScheduleButton></ScheduleButton>
       </Box>
+
       <Box>
         <AvailableServices />
       </Box>
+
       <hr />
+      
       <Box>
         <MyRequests />
       </Box>

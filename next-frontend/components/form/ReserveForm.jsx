@@ -1,5 +1,10 @@
+/*  
+    This component is a generic Form.
+
+    Parents -> ReservePage
+*/
+
 'use client'
-import { useState } from 'react'
 import '../../app/globals.css'
 function ReserveForm({ machineName, formData, errors, onChange }) {
 

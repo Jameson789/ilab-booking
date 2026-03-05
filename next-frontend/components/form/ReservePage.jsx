@@ -1,3 +1,8 @@
+/*
+    This component renders the form and handles submission.
+
+    Children -> ReserveForm, LabChoice
+*/
 "use client"
 
 import { useState } from "react";

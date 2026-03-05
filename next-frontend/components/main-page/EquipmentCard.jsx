@@ -1,7 +1,7 @@
 /*
   This component renders an Equipment Card that is clickable and takes you to the form to schedule equipment.
 
-  Parents -> AvailableServicesSection
+  Parents -> AvailableServices
 */
 "use client";
 
@@ -13,7 +13,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 import { useRouter } from "next/navigation";
 
-function ReservationButton({ machineName }) {
+function EquipmentCard({ machineName }) {
   const router = useRouter();
 
   const handleClick = () => {
@@ -44,4 +44,4 @@ function ReservationButton({ machineName }) {
   );
 }
 
-export default ReservationButton;
+export default EquipmentCard;
