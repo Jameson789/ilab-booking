@@ -3,11 +3,13 @@ set -e
 
 echo "Starting server..."
 cd server
+npm i
 npm run dev &
 SERVER_PID=$!
 
 echo "Starting Next.js frontend..."
 cd ../next-frontend
+npm i
 npm run dev &
 FRONTEND_PID=$!
 

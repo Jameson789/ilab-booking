@@ -37,7 +37,7 @@ cd ..
 
 1) Be in root of project 
 
-2) Run ```npm run dev``` in terminal 
+2) On Mac/Linux run ```npm run dev``` in terminal | On windows run ```chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh```
 
 3) Any Errors will show up in console output
 
@@ -47,7 +47,7 @@ This project includes a script that runs the server tests from the root director
 
 1) Be in root of project 
 
-2) Run ```npm run test``` in terminal 
+2) On Mac/Linux run ```npm run test``` in terminal | On windows run ```chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh```
 
 3) Any Errors will show up in console output
 
