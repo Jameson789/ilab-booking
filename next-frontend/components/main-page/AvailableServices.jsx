@@ -1,5 +1,5 @@
 /*
-  This component render the header and all active equipment card components.
+  This component renders the header and all active equipment card components.
 */
 
 "use client";
