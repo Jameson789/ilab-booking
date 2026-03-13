@@ -5,7 +5,7 @@
 */
 
 'use client'
-import ReservePage from "@/components/form/ReservePage";
+import ReservePage from "@/components/form/MakeRequest";
 import { useSearchParams } from "next/navigation";
 
 export default function Page() {

@@ -1,12 +1,12 @@
 /*  
     This component is a generic Form.
 
-    Parents -> ReservePage
+    Parents -> MakeRequest
 */
 
 'use client'
 import '../../app/globals.css'
-function ReserveForm({ machineName, formData, errors, onChange }) {
+export default function RequestForm({ machineName, formData, errors, onChange }) {
 
     return (
         <>
@@ -65,5 +65,3 @@ function ReserveForm({ machineName, formData, errors, onChange }) {
         </>
     )
 }
-
-export default ReserveForm;

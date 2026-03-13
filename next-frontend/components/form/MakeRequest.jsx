@@ -1,16 +1,16 @@
 /*
     This component renders the form and handles submission.
 
-    Children -> ReserveForm, LabChoice
+    Children -> RequestForm, LabChoice
 */
 "use client"
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import ReserveForm from "./ReserveForm";
+import ReserveForm from "./RequestForm";
 import LabChoice from "./LabChoice";
 
-function Reserve({ machineName }) {
+export default function MakeRequest({ machineName }) {
     const router = useRouter();
 
     const [formData, setFormData] = useState({
@@ -91,5 +91,3 @@ function Reserve({ machineName }) {
         </>
     );
 }
-
-export default Reserve;
