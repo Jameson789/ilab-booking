@@ -1,4 +1,21 @@
 # hutch-booking
+## Developer Setup Instructions
+### Update "Available Services"
+To update the card in the "Available Services" section go to ```next-frontend\components\main-page\AvailableServices.jsx``` and update the "machines" in the grid.
+
+#### Updating current services
+For whichever service you are changing, replace "[Placeholder Service]" with your new service name.
+
+#### Adding a new services
+
+Copy this block into the grid and replace "[Placeholder Service]" with your service name.
+```
+<Grid size={3}>
+    <EquipmentCard machineName="[Placeholder Service]" />
+</Grid>
+```
+
+
 ## Frontend
 1. Go to the frontend directory.
 `cd next-frontend`
