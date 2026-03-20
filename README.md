@@ -15,58 +15,40 @@ Copy this block into the grid and replace "[Placeholder Service]" with your serv
 </Grid>
 ```
 
-
-## Frontend
-1. Go to the frontend directory.
-`cd next-frontend`
-2. Install dependencies.  
-`npm i`
-3. Run app on port 3000.  
-`npm run dev`
-
-## Backend
-
 ## Running the App and Tests
+1. Make sure `npm` is installed
 
-#### Requirements
+### Running the App: 
+*Be in root of project*
 
-Make sure you have the following installed:
-
-- Node.js (includes `npm`)
-- Server dependencies installed in the `server` directory
-- Frontend dpendencies installed in the `next-frontend` directory
-
-If dependencies are not installed yet:
-
+#### Mac / Linux 
 ```bash
-cd server
-npm install
-cd ..
+npm run dev
+``` 
+#### Windows
+``` bash
+bash scripts/start-dev.sh
 ```
-and: 
-```bash
-cd next-frontend
-npm install
-cd ..
+If that doesn't work, run:
+``` bash
+chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh
 ```
 
-#### Running the App: 
+### Running Tests: 
+*Be in root of project*
 
-1) Be in root of project 
-
-2) On Mac/Linux run ```npm run dev``` in terminal | On windows run ```chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh```
-
-3) Any Errors will show up in console output
-
-#### Running Tests: 
-
-This project includes a script that runs the server tests from the root directory.
-
-1) Be in root of project 
-
-2) On Mac/Linux run ```npm run test``` in terminal | On windows run ```chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh```
-
-3) Any Errors will show up in console output
+#### Mac / Linux
+``` bash
+npm run test
+``` 
+#### Windows
+``` bash
+bash scripts/test-server.sh
+```
+If that doesn't work, run:
+``` bash
+chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh
+```
 
 ---
 
@@ -77,8 +59,9 @@ This project includes a script that runs the server tests from the root director
 - ❌ If Node/npm is not installed or `server/` is missing → the script prints an error and exits non-zero.
 
 ## UI Design
-### Rules
-#### Color Palette
+### Wireframe
+[Link to *initial* Wireframe](https://www.notion.so/PCI-Portal-Wireframe-3-3-3198414e033680f382efdf31b2740347?source=copy_link)
+### Color Palette
 <span style="display:inline-block;width:12px;height:12px;background:#18365D;border-radius:3px;margin-right:6px;"></span> Dark Navy `#18365D`
 
 <span style="display:inline-block;width:12px;height:12px;background:#FFFFFF;border-radius:3px;margin-right:6px;"></span> White `#FFFFFF`
