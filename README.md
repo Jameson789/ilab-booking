@@ -1,15 +1,21 @@
-# hutch-booking
+# iLab Booking
+This application is a lightweight portal for interacting with iLab’s **Service Requests** system. It provides a simplified interface for viewing and managing requests, addressing the usability challenges of the native iLab platform. By streamlining access to key information, the app improves efficiency and reduces friction for users who regularly work with service requests.
+
+### Development Team
+- Augy Markham   | [linkedin](https://www.linkedin.com/in/augy-markham/) | [github](https://github.com/AugleBoBaugles) |
+- Jameson Farmer | [linkedin](https://www.linkedin.com/in/jameson-farmer) | [github](https://github.com/Jameson789) | 
+- Rebecca Riffle | [linkedin](https://www.linkedin.com/in/rebecca-riffle/) | [github](https://github.com/rifflere) |
 ## Developer Setup Instructions
 ### Update "Available Services"
 To update the card in the "Available Services" section go to ```next-frontend\components\main-page\AvailableServices.jsx``` and update the "machines" in the grid.
 
 #### Updating current services
-For whichever service you are changing, replace "[Placeholder Service]" with your new service name.
+1. For whichever service you are changing, replace "[Placeholder Service]" with your new service name.
 
 #### Adding a new services
 
-Copy this block into the grid and replace "[Placeholder Service]" with your service name.
-```
+1. Copy this block into the grid and replace "[Placeholder Service]" with your service name.
+```javascript
 <Grid size={3}>
     <EquipmentCard machineName="[Placeholder Service]" />
 </Grid>
