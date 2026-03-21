@@ -5,7 +5,43 @@ This application is a lightweight portal for interacting with iLab’s **Service
 - Augy Markham   | [linkedin](https://www.linkedin.com/in/augy-markham/) | [github](https://github.com/AugleBoBaugles) |
 - Jameson Farmer | [linkedin](https://www.linkedin.com/in/jameson-farmer) | [github](https://github.com/Jameson789) | 
 - Rebecca Riffle | [linkedin](https://www.linkedin.com/in/rebecca-riffle/) | [github](https://github.com/rifflere) |
-## Developer Setup Instructions
+## Developer Instructions
+### Prerequisites
+- Node.js
+- npm
+### Setup Instructions
+### Environment Variables
+### Running the App: 
+*Be in root of project*
+
+#### Mac / Linux 
+```bash
+npm run dev
+``` 
+#### Windows
+``` bash
+# Run this
+bash scripts/start-dev.sh
+
+# If that doesn't work, run this ->
+chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh
+```
+
+### Running Tests: 
+*Be in root of project*
+
+#### Mac / Linux
+``` bash
+npm run test
+``` 
+#### Windows
+``` bash
+# Run this
+bash scripts/test-server.sh
+
+# If that doesn't work, run this ->
+chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh
+```
 ### Update "Available Services"
 To update the card in the "Available Services" section go to ```next-frontend\components\main-page\AvailableServices.jsx``` and update the "machines" in the grid.
 
@@ -21,40 +57,7 @@ To update the card in the "Available Services" section go to ```next-frontend\co
 </Grid>
 ```
 
-## Running the App and Tests
-1. Make sure `npm` is installed
 
-### Running the App: 
-*Be in root of project*
-
-#### Mac / Linux 
-```bash
-npm run dev
-``` 
-#### Windows
-``` bash
-bash scripts/start-dev.sh
-```
-If that doesn't work, run:
-``` bash
-chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh
-```
-
-### Running Tests: 
-*Be in root of project*
-
-#### Mac / Linux
-``` bash
-npm run test
-``` 
-#### Windows
-``` bash
-bash scripts/test-server.sh
-```
-If that doesn't work, run:
-``` bash
-chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh
-```
 
 ---
 
