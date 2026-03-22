@@ -28,7 +28,7 @@ export default function HomePage() {
           component="h1"
           color="primary" 
           gutterBottom>
-          PCI Portal
+          iLab Booking
         </Typography>
         <ScheduleButton></ScheduleButton>
       </Box>

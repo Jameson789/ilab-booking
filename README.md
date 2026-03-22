@@ -46,6 +46,16 @@ bash scripts/test-server.sh
 # If that doesn't work, run this ->
 chmod +x ./scripts/test-server.sh && ./scripts/test-server.sh
 ```
+
+#### Expected Behavior
+
+- ✅ If all tests pass → the script exits successfully.
+- ❌ If any tests fail → the script exits with a non-zero status code (useful for CI).
+- ❌ If Node/npm is not installed or `server/` is missing → the script prints an error and exits non-zero.
+
+---
+*These next steps are important to add specific functionality to the app*
+---
 ### Update "Available Services"
 To update the card in the "Available Services" section go to ```next-frontend\components\main-page\AvailableServices.jsx``` and update the "machines" in the grid.
 
@@ -61,15 +71,15 @@ To update the card in the "Available Services" section go to ```next-frontend\co
 </Grid>
 ```
 
+---
+
+### Update Consultation URL
+1. In this file `next-frontend\components\buttons\ScheduleButton.jsx` update the `CONSULTATION_URL` variable with your url.
 
 
 ---
+  
 
-#### Expected Behavior
-
-- ✅ If all tests pass → the script exits successfully.
-- ❌ If any tests fail → the script exits with a non-zero status code (useful for CI).
-- ❌ If Node/npm is not installed or `server/` is missing → the script prints an error and exits non-zero.
 
 ## UI Design
 ### Wireframe

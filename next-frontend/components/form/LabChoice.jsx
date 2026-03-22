@@ -26,7 +26,7 @@ function LabChoice() {
                     checked={doingScans === "pciCore"}
                     onChange={(e) => setDoingScans(e.target.value)}
                 />
-                PCI Core
+                Your Lab
                 </label>
 
                 <label>
