@@ -11,6 +11,10 @@ This application is a lightweight portal for interacting with iLab’s **Service
 - npm
 ### Setup Instructions
 ### Environment Variables
+1. Duplicate this env file ```server\template.env``` and name it ```.env```
+2. In ```.env``` fill in ```ILAB_BASE_URL``` and ```ILAB_API_TOKEN```
+*If you don't fill these in, the app will not connect to iLab.*
+
 ### Running the App: 
 *Be in root of project*
 
