@@ -1,9 +1,6 @@
 # iLab Booking
 This application is a lightweight portal for interacting with iLab’s **Service Requests** system. It provides a simplified interface for viewing and managing requests, addressing the usability challenges of the native iLab platform. By streamlining access to key information, the app improves efficiency and reduces friction for users who regularly work with service requests.
 
-*iLab Booking App Preview*
-![iLab Booking App Preview](iLabBookingPreview.png)
-
 ### Development Team
 - Augy Markham   | [linkedin](https://www.linkedin.com/in/augy-markham/) | [github](https://github.com/AugleBoBaugles) |
 - Jameson Farmer | [linkedin](https://www.linkedin.com/in/jameson-farmer) | [github](https://github.com/Jameson789) | 
@@ -13,7 +10,7 @@ This application is a lightweight portal for interacting with iLab’s **Service
 1. [Developer Instructions](#developer-instructions)
 1. [Tech Stack + Architecture](#tech-stack--architecture)
 1. [UI Design](#ui-design)
-1. [App Features](#app-features)
+1. [Features](#features)
 
 ## Developer Instructions
 ### Prerequisites
@@ -24,7 +21,7 @@ This application is a lightweight portal for interacting with iLab’s **Service
 Configure the app to connect to iLab.
 1. Duplicate this env file ```server\template.env``` and name it ```.env```
 2. In ```.env``` fill in ```ILAB_BASE_URL``` and ```ILAB_API_TOKEN```.
-*If you don't fill these in, the app will not connect to iLab.*
+*If these are not configured, the app will not connect to iLab.*
 
 NOTE: See [iLab API documentation](https://help.ilab.agilent.com/ilab-api) for help setting up a token.
 ### Running the App
@@ -80,7 +77,7 @@ To update the card in the "Available Services" section go to ```next-frontend\co
 #### Updating current services
 1. For whichever service you are changing, replace "[Placeholder Service]" with your new service name.
 
-#### Adding a new services
+#### Adding new services
 
 1. Copy this block into the grid and replace "[Placeholder Service]" with your service name.
 ```javascript
@@ -93,17 +90,16 @@ To update the card in the "Available Services" section go to ```next-frontend\co
 
 ### Update Consultation URL
 The consultation URL is a link to your department calendar or email.
-1. In this file `next-frontend\components\buttons\ScheduleButton.jsx` update the `CONSULTATION_URL` variable with your url.
+1. In this file `next-frontend\components\buttons\ScheduleButton.jsx` update the `CONSULTATION_URL` variable with your URL.
 
 
 ---
 ## Tech Stack + Architecture
-This monorepo contains a [frontend](#frontend), a [backend](#backend), [tests](#testing-strategy), and [scripts](#automation-scripts) to automate installation of dependencies and starting and testing the app.
+This monorepo contains a [frontend](#frontend), a [backend](#backend), [tests](#testing-strategy), and [scripts](#automation-scripts) to automate dependency installation, startup, and testing.
 ### Frontend
 The frontend is built with Next.js (App Router) using React functional components and client-side state where needed.
 #### Frontend Tech Stack
 - **Next.js** - Routing, project structure, and API proxying
-    - Configured to connect to localhost server on port 3000 for API calls.
 - **React hooks** - Local state management (useState, useEffect)
 - **Material UI (MUI)** - Consistent design system and responsive layout
 - **Component-driven structure** - Separation of UI, form logic, and data display
@@ -200,4 +196,133 @@ The goal is a system that is:
 
 <span style="display:inline-block;width:12px;height:12px;background:#0A799A;border:1px solid #ccc;border-radius:3px;margin-right:6px;"></span> Teal `#0A799A`
 
-## App Features
+## Features
+
+*iLab Booking App Preview*
+
+<img src="images/iLabBookingPreview.png" alt="iLab Booking App Preview" width="75%"/>
+
+### Browse Available Services
+Services shown on the main page represent available **iLab services**. Selecting a service takes the user to a reservation form where they can submit a service request.
+
+*iLab Services Preview*
+
+<img src="images/iLabServicesPreview.png" alt="iLab Services Preview" width="75%"/>
+
+### Create a Service Request
+Users can create a service request through a guided form.
+
+**Current form fields:**
+- Owner email
+- PI email
+- Study name
+- Study focus
+- Billing code
+- Patient data file upload (UI only, not yet persisted)
+- Equipment usage selection (Core vs My Lab)
+
+If **My Lab** is selected, a conditional training section appears:
+
+**Training section:**
+- Training reminder (required if not trained in last 6 months)
+- Optional training request checkbox
+
+*Service Request Form*
+
+<img src="images/PlaceholderServiceForm.png" alt="Reservation Form Screenshot" width="75%"/>
+
+#### Current API Behavior
+**Currently only the following fields are sent to the iLab API:**
+- Owner email
+- PI email
+- Study name
+- Default state ("proposed")
+
+Additional fields are collected for future integration but are **not yet transmitted to iLab**.
+
+#### Planned Improvements
+Future development may include:
+- Improved styling
+- Sending all collected form data to iLab
+- More form fields
+- Expanded conditional logic
+- File upload integration
+- Additional validation rules
+---
+### View Service Requests
+The **My Requests** section displays live service requests retrieved from iLab.
+
+Each request card currently shows:
+- Study name
+- Request state
+- Submission date
+
+*My Requests Section*
+
+<img src="images/MyRequests.png" alt="My Requests Screenshot" width="75%"/>
+
+#### Current Behavior
+- Requests are currently unfiltered
+- All accessible service requests are displayed
+- Errors display if the API cannot be reached
+
+#### Planned Improvements
+Future improvements may include:
+- Filtering requests by logged-in user
+- Date filtering
+- Status filtering
+- Search functionality
+- Pagination
+
+### Reservation Details View
+Selecting a request opens a simple detail page showing reservation metadata.
+
+Currently displayed:
+- Request ID
+- Study name
+- State
+- Submission date
+
+*Reservation Details*
+
+<img src="images/ReservationDetails.png" alt="Reservation Details Screenshot" width="25%"/>
+
+#### Planned Improvements
+Future versions may include:
+- Improved styling
+- Editable request details
+
+### Schedule Consultation
+A **Schedule Consultation** button allows users to contact the core facility.
+
+*Schedule Consultation Button*
+
+<img src="images/ScheduleConsultationButton.png" alt="Schedule Consultation Button Screenshot" width="25%"/>
+
+This button can be configured to:
+- Open a scheduling calendar
+- Open an email contact
+- Link to a department scheduling system
+
+See [Update Consultation URL](#update-consultation-url) in Developer Instructions above.
+
+## Current Limitations
+Current known limitations include:
+
+- No authentication or user accounts
+- Request filtering not yet implemented
+- Some form fields are not yet connected to iLab
+- File uploads are not yet persisted
+- Limited reservation detail view
+
+## Planned Enhancements
+This project is designed to be easily extended. Potential enhancements include:
+
+- Adapt to a Teams app with SSO
+- Authentication and user roles
+- Full iLab field mapping
+- File storage integration
+- Request filtering and search
+- Improved reservation detail pages
+- Admin management features
+- UI polish and accessibility improvements
