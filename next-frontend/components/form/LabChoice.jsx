@@ -12,7 +12,7 @@ import RequestTrainingSection from "./RequestTrainingSection";
 
 function LabChoice() {
     // Set who is doing the scans
-    const [usingEquiment, setUsingEquipment] = useState("core"); // "myLab" or "pciCore"
+    const [usingEquiment, setUsingEquipment] = useState("Core"); // "myLab" or "pciCore"
 
     return (
         <>
