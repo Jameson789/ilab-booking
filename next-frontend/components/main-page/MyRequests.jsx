@@ -50,9 +50,8 @@ function MyRequests() {
             <div className="reservations-grid">
                 <Grid container spacing={2}>
                     {reservations.map((reservation) => (
-                        <Grid size={4}>
+                        <Grid size={4} key={reservation.id}>
                             <Reservation
-                                key={reservation.id}
                                 id={reservation.id}
                                 name={reservation.name}
                                 state={reservation.state}
