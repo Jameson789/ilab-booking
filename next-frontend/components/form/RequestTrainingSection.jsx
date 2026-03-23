@@ -7,7 +7,7 @@ function RequestTrainingSection() {
     return (
         <div className="form-section">
             <h3>Training</h3>
-            <p>Training is required for this modality if you have not been trained in the last <b>six months.</b></p>
+            <p>Training is required for this equipment if you have not been trained in the last <b>six months.</b></p>
             <input
                 type="checkbox"
                 id="requestTraining"
