@@ -13,6 +13,7 @@ This application is a lightweight portal for interacting with iLab’s **Service
 1. [Developer Instructions](#developer-instructions)
 1. [Tech Stack + Architecture](#tech-stack--architecture)
 1. [UI Design](#ui-design)
+1. [App Features](#app-features)
 
 ## Developer Instructions
 ### Prerequisites
@@ -198,3 +199,5 @@ The goal is a system that is:
 <span style="display:inline-block;width:12px;height:12px;background:#AA4AC4;border:1px solid #ccc;border-radius:3px;margin-right:6px;"></span> Warm Purple `#AA4AC4`
 
 <span style="display:inline-block;width:12px;height:12px;background:#0A799A;border:1px solid #ccc;border-radius:3px;margin-right:6px;"></span> Teal `#0A799A`
+
+## App Features
