@@ -23,7 +23,7 @@ Configure the app to connect to iLab.
 *If you don't fill these in, the app will not connect to iLab.*
 
 NOTE: See [iLab API documentation](https://help.ilab.agilent.com/ilab-api) for help setting up a token.
-### Running the App:
+### Running the App
 *Be in root of project*
 
 #### Mac / Linux 
@@ -39,7 +39,13 @@ bash scripts/start-dev.sh
 chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh
 ```
 
-### Running Tests: 
+### Accessing the App
+Once both services are running, the frontend will be available at:
+
+http://localhost:3001
+
+
+### Running Tests
 *Be in root of project*
 
 #### Mac / Linux
