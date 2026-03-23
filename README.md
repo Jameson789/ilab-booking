@@ -89,7 +89,7 @@ The consultation URL is a link to your department calendar or email.
 
 ---
 ## Tech Stack + Architecture
-This monorepo contains a frontend, a backend, and scripts to automate installation of dependencies and starting and testing the app.
+This monorepo contains a [frontend](#frontend), a [backend](#backend), [tests](#testing-strategy), and [scripts](#automation-scripts) to automate installation of dependencies and starting and testing the app.
 ### Frontend
 The frontend is built with Next.js (App Router) using React functional components and client-side state where needed.
 #### Frontend Tech Stack
