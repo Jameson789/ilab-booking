@@ -1,6 +1,9 @@
 # iLab Booking
 This application is a lightweight portal for interacting with iLab’s **Service Requests** system. It provides a simplified interface for viewing and managing requests, addressing the usability challenges of the native iLab platform. By streamlining access to key information, the app improves efficiency and reduces friction for users who regularly work with service requests.
 
+*iLab Booking App Preview*
+![iLab Booking App Preview](iLabBookingPreview.png)
+
 ### Development Team
 - Augy Markham   | [linkedin](https://www.linkedin.com/in/augy-markham/) | [github](https://github.com/AugleBoBaugles) |
 - Jameson Farmer | [linkedin](https://www.linkedin.com/in/jameson-farmer) | [github](https://github.com/Jameson789) | 
@@ -43,7 +46,6 @@ chmod +x ./scripts/start-dev.sh && ./scripts/start-dev.sh
 Once both services are running, the frontend will be available at:
 
 http://localhost:3001
-
 
 ### Running Tests
 *Be in root of project*
