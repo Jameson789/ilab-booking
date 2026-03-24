@@ -12,8 +12,6 @@ import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 
 
 function Reservation({ id, name, state, submitted_at }) {
-
-
   return (
     <>
       <Card>

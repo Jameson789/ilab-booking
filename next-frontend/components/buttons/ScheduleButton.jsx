@@ -3,10 +3,12 @@
 */
 import Button from '@mui/material/Button'
 
+const CONSULTATION_URL = "REPLACE WITH YOUR CONSULTATION URL" // Replace this to update the URL
+
 
 function ScheduleButton() {
   const handleClick = () => {
-    window.open("https://outlook.office.com/book/testPCIteamconsult@fredhutch.onmicrosoft.com/?ismsaljsauthenabled");
+    window.open(CONSULTATION_URL);
   };
 
   return (

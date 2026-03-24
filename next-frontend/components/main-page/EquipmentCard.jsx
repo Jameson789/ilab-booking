@@ -34,9 +34,9 @@ function EquipmentCard({ machineName }) {
             <Typography gutterBottom variant="h5" component="div">
               {machineName}
             </Typography>
-            {/* <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
               Insert description of {machineName} here...
-            </Typography> // TODO: See if Elena wants descriptions here*/ } 
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>

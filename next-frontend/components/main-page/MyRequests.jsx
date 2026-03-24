@@ -16,11 +16,25 @@ function MyRequests() {
     const [error, setError] = useState(null);
     
     useEffect(() => {
-        fetch('/api/service-requests')
-            .then(res => res.json())
-            .then(data => setReservations(data))
-            .catch(err => setError(err.message));
-    }, []);
+    fetch('/api/service-requests')
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Failed to fetch reservations');
+            }
+            return res.json();
+        })
+        .then(data => {
+            if (Array.isArray(data)) {
+                setReservations(data);
+            } else {
+                throw new Error('Data received is not an array');
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            setError(err.message);
+        });
+}, []);
 
     if (error) return <p>Error loading reservations: {error}</p>;
 
@@ -36,9 +50,8 @@ function MyRequests() {
             <div className="reservations-grid">
                 <Grid container spacing={2}>
                     {reservations.map((reservation) => (
-                        <Grid size={4}>
+                        <Grid size={4} key={reservation.id}>
                             <Reservation
-                                key={reservation.id}
                                 id={reservation.id}
                                 name={reservation.name}
                                 state={reservation.state}

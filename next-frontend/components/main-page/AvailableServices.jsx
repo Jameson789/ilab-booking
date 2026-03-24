@@ -24,17 +24,15 @@ function AvailableServices() {
       </Typography>
       <Grid sx={{marginBottom: "17px"}}container spacing = {2}>
         <Grid size={3}>
-          <EquipmentCard machineName="MRI" />
+          <EquipmentCard machineName="[Placeholder Service]"/>
         </Grid>
         <Grid size={3}>
-          <EquipmentCard machineName="Ultrasound" />
+          <EquipmentCard machineName="[Placeholder Service]"/>
         </Grid>
         <Grid size={3}>
-          <EquipmentCard machineName="Other"/>
+          <EquipmentCard machineName="[Placeholder Service]"/>
         </Grid>
       </Grid>
-      
-      
     </>
   );
 }
